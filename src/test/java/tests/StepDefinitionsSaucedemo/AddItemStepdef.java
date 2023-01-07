@@ -6,7 +6,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import static org.junit.Assert.*;
 
 import java.util.concurrent.TimeUnit;
@@ -51,26 +55,59 @@ public class AddItemStepdef {
 
     @And("I click one item")
     public void i_click_one_item() {
+        driver.findElement(By.id("item_4_title_link")).click();
 
     }
 
     @And("I verify that the page shows the item")
     public void i_verify_that_the_page_shows_the_item() {
 
+        WebElement strText1 = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div[2]/div[1]"));
+        String expected = "Sauce Labs Backpack";
+        String actual = strText1.getText();
+         assertTrue(actual.contains("Sauce Labs Backpack"));
+         //  System.out.println(actual);
     }
 
     @And("I click add to the card")
     public void i_click_add_to_the_card() {
+        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+    }
+
+
+    @And("I click on the card")
+    public void i_click_on_the_the_card() {
+        driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span")).click();
+    }
+
+    @And("I verify that the card page shows")
+    public void i_verify_that_the_card_page_shows() {
+
+        WebElement strText1 = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span"));
+        String actual = strText1.getText();
+        System.out.println(actual);
+        assertTrue(actual.contains("YOUR CART"));
 
     }
+
     @And("I verify that item is in the card")
     public void i_verify_that_item_is_in_the_card() {
-
+        WebElement strText1 = driver.findElement(By.xpath("//*[@id=\"item_4_title_link\"]/div"));
+        String actual = strText1.getText();
+        System.out.println(actual);
+        assertTrue(actual.contains("Sauce Labs Backpack"));
     }
 
+     @And("I lgout")
+     public void i_logout() {
+            driver.findElement(By.id("react-burger-menu-btn")).click();
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            driver.findElement(By.id("logout_sidebar_link")).click();
+
+     }
     @And("close browser")
     public void close_browser() {
-
+        driver.quit();
     }
 
 

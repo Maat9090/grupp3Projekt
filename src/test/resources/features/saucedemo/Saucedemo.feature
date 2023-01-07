@@ -10,5 +10,8 @@ Feature:Saucedemo Add item and check the cart
     And I click one item
     And I verify that the page shows the item
     And I click add to the card
+    And  I click on the card
+    And I verify that the card page shows
     And I verify that item is in the card
+    And I lgout
     And close browser
