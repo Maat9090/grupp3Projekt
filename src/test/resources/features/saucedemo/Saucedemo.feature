@@ -13,5 +13,5 @@ Feature:Saucedemo Add item and check the cart
     And  I click on the card
     And I verify that the card page shows
     And I verify that item is in the card
-    And I lgout
+    And I logout
     And close browser

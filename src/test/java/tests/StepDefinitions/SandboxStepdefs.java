@@ -1,6 +1,7 @@
 package tests.StepDefinitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -30,7 +31,6 @@ public class SandboxStepdefs {
 
     }
 
-
     @And("I click one item")
     public void  i_click_one_item(){
 
@@ -51,7 +51,14 @@ public class SandboxStepdefs {
 
     }
 
-    @And(" close browser")
+    @And("I logout")
+    public void i_logout(){
+        driver.findElement(By.id("react-burger-menu-btn")).click();
+        driver.findElement(By.id("logout_sidebar_link")).click();
+    }
+
+
+    @And("Close browser")
     public void  close_browser(){
         driver.quit();
 

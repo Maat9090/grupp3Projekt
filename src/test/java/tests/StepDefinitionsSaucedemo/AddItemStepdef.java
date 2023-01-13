@@ -98,12 +98,11 @@ public class AddItemStepdef {
         assertTrue(actual.contains("Sauce Labs Backpack"));
     }
 
-     @And("I lgout")
+     @And("I logout")
      public void i_logout() {
             driver.findElement(By.id("react-burger-menu-btn")).click();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             driver.findElement(By.id("logout_sidebar_link")).click();
-
      }
     @And("close browser")
     public void close_browser() {
