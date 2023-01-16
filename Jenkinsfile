@@ -1,6 +1,9 @@
 pipeline {
     agent any
-   
+    tools {
+        maven 'apache-maven-3.8.7'
+        jdk 'JAVA_HOME'
+    }
     stages {
 	stage('Checkout code') {
         	steps {
@@ -15,14 +18,17 @@ pipeline {
         }
     }
 		
-	    
-	    	
-	stage ('Build ') {
+	stage ('Build') {
 		steps {
-                      withMaven(maven : 'maven_3_8_7') {
-                      	bat "mvn clean verify"
-                        } 
-		}}
+        withMaven {
+      	bat "mvn clean verify"
+    } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
+		}}    
+	
+	    
+	    
+	    
+	    
 	
 	    
 }
