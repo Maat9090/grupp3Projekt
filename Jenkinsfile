@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven 'apache-maven-3.8.7'
-        jdk 'JAVA_HOME'
+        maven install 'apache-maven-3.8.7'
+        jdk install 'JAVA_HOME'
     }
     stages {
 	stage('Checkout code') {
