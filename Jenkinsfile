@@ -15,6 +15,17 @@ pipeline {
         }
     }
 		
+	    
+	    	
+	stage ('Build ') {
+		steps {
+                      withMaven(maven : 'maven_3_8_7') {
+                      	bat "mvn clean verify"
+                        } 
+		}}
+	
+	    
+/*	    
 	stage ('Build') {
 		steps {
         withMaven {
@@ -37,6 +48,6 @@ pipeline {
 		fileIncludePattern: "**/cucumber.json",
                 jsonReportDirectory: 'target'}}
 
-}
-
+               }
+*/
 }
