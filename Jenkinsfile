@@ -15,6 +15,14 @@ pipeline {
         }
     }
 		
+	    	
+	stage ('Build') {
+		steps { bat 'mvn -B  compile'
+              } 
+		} 
+	    
+	    
+	    
 	stage ('Build') {
 		steps {
         withMaven {
