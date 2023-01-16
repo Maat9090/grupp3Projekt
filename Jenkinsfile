@@ -23,7 +23,7 @@ pipeline {
 	    
 	    
 	    
-	stage ('Build') {
+	stage ('Build2') {
 		steps {
         withMaven {
       	bat "mvn clean verify"
