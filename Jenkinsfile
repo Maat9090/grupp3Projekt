@@ -17,7 +17,7 @@ pipeline {
 		
 	    	
 	stage ('Build') {
-		steps { bat 'mvn -B  compile'
+		steps { bat  'mvn --version' 
               } 
 		} 
 	    
