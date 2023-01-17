@@ -18,18 +18,26 @@ pipeline{
 
                 steps {
 
-                withMaven(maven: 'maven_3_5_0') {
+                withMaven(maven: 'maven_3_8_7') {
 			bat 'mvn test'       } } }
 
 
 	    
 	    
-        stage ('Cucumber Reports') {
+        stage("Cucumber Report"){
+		steps{
+			// Get some code from a GitHub repository
+    		checkout([$class: 'GitSCM',
+        	branches: [[name: '*/master']],
+        	extensions: [[$class: 'CloneOption', timeout: 120]],
+        	gitTool: 'Default', 
+        	userRemoteConfigs: [[url: 'https://github.com/Maat9090/grupp3Projekt.git']]
+			 ]) 
+		cucumber buildStatus: "UNSTABLE",
+		fileIncludePattern: "**/cucumber.json",
+                jsonReportDirectory: 'target'}}
 
-            steps {
-                cucumber buildStatus: "UNSTABLE",
-                    fileIncludePattern: "**/cucumber.json",
-                    jsonReportDirectory: 'target'   } }
+                  
 
     }
 
