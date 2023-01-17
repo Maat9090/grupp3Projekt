@@ -15,15 +15,24 @@ pipeline {
         }
     }
 		
-	    	
+	    
+        stage ('Compile') {
+
+            steps {
+
+                withMaven(maven: 'maven_3_8_7') {
+                    sh 'mvn clean install'
+
+                }
+
+            }
+        }
+	    
+	    
+	   	    
+	    
+	    
 	stage ('Build') {
-		steps { bat  'mvn --version' 
-              } 
-		} 
-	    
-	    
-	    
-	stage ('Build2') {
 		steps {
         withMaven {
       	bat 'mvn clean verify'
@@ -50,4 +59,5 @@ pipeline {
 	    
 	
 	    
+}
 }
