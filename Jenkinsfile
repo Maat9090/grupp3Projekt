@@ -9,18 +9,8 @@ pipeline{
             steps {
 
                 withMaven(maven: 'maven_3_8_7') {
-                    bat 'mvn clean install'   } } }
+                    bat 'mvn clean test'   } } }
 	    
-	    
-	    
-	    
-          stage ('Test') {
-
-                steps {
-
-                withMaven(maven: 'maven_3_8_7') {
-			bat 'mvn test'       } } }
-
 
 	    
 	    
