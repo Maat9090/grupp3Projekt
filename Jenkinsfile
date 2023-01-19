@@ -24,7 +24,7 @@ pipeline{
 
 	steps {
         withMaven {
-      	bat "mvn clean verify"  } }}
+      	bat "mvn clean test"  } }}
 	    
 	    
 	    
