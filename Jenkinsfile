@@ -1,5 +1,28 @@
 pipeline{
-
+	
+ agent any
+    tools {
+        maven 'apache-maven-3.8.7'
+        jdk 'JAVA_HOME'
+    }
+    stages {
+	stage('Checkout code') {
+        	steps {
+		// Get some code from a GitHub repository
+    	checkout([$class: 'GitSCM',
+        branches: [[name: '*/master']],
+        extensions: [[$class: 'CloneOption', timeout: 120]],
+        gitTool: 'Default', 
+        userRemoteConfigs: [[url: 'https://github.com/Maat9090/grupp3Projekt.git']]
+    ])
+           	checkout scm
+        }
+    }
+		
+	
+	
+	
+	
     agent any
 
     stages {
@@ -8,8 +31,7 @@ pipeline{
 
             steps {
 
-                withMaven(maven: 'maven_3_8_7') {
-                    bat 'mvn clean test'   } } }
+		    bat 'mvn clean test'   } }}
 	    
 
 	    
