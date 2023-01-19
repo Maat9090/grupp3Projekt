@@ -24,7 +24,8 @@ pipeline{
 
 	steps {
         withMaven {
-      	bat "mvn clean test" 
+		script{
+			bat (/mvn clean test/) }
 	step([$class: 'Publisher', reportFilenamePattern: '**/custom/testng-results.xml'])
 
 	
