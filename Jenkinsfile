@@ -13,27 +13,21 @@ pipeline{
         branches: [[name: '*/master']],
         extensions: [[$class: 'CloneOption', timeout: 120]],
         gitTool: 'Default', 
-        userRemoteConfigs: [[url: 'https://github.com/Maat9090/grupp3Projekt.git']]
-    ])
+        userRemoteConfigs: [[url: 'https://github.com/Maat9090/grupp3Projekt.git']]])
            	checkout scm
         }
     }
 		
 	
-	
-	
-	
-    agent any
-
-    stages {
 
         stage ('Compile ') {
 
-            steps {
-
-		    bat 'mvn clean test'   } }}
+	steps {
+        withMaven {
+      	bat "mvn clean verify"  } }}
 	    
-
+	    
+	    
 	    
 	    
         stage("Cucumber Report"){
