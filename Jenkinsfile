@@ -28,17 +28,7 @@ pipeline{
 		}}
 	
 
-        stage ('Compile ') {
-
-	steps {
-        withMaven {
-		script{
-			bat (/mvn clean test/) }
-	step([$class: 'Publisher', reportFilenamePattern: '**/custom/testng-results.xml'])
-
-	
-	} }}
-	    
+      
 	    
 	    
 	    
