@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="3.8">
+    <CLASSES>
+      <root url="file://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-compiler-plugin/3.8.7" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-compiler-plugin/3.8.7" recursive="false" />
+  </library>
+</component>
