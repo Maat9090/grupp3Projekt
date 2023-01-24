@@ -38,7 +38,7 @@ pipeline{
         	userRemoteConfigs: [[url: 'https://github.com/Maat9090/grupp3Projekt.git']]
 			 ]) 
 		cucumber buildStatus: "UNSTABLE",
-		fileIncludePattern: "**/cucumber.json",
+		fileIncludePattern: "**/CucumberTestReport.json",
                 jsonReportDirectory: 'target'}}
 
                   
