@@ -72,8 +72,6 @@
 
 
 
-
-
            <!-- ***************io.cucumber********************* -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -109,16 +107,7 @@
             <scope>test</scope>
         </dependency>
 
-
-           <dependency>
-               <groupId>repository.io.cucumber</groupId>
-               <artifactId>cucumber-testng</artifactId>
-               <version>7.10.1</version>
-               <scope>test</scope>
-           </dependency>
-
            <!-- ***************io.cucumber/slut ********************* -->
-
 
 
 
