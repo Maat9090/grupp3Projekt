@@ -20,27 +20,32 @@
 
           <!--   <maven.compiler.version>3.8.7</maven.compiler.version> -->
           <maven.surefire.version>2.22.2</maven.surefire.version>
+       </properties>
 
-        <maven.test.failure.ignore>true</maven.test.failure.ignore>
-        <aspectj.version>1.8.10</aspectj.version>
-
-    </properties>
-
-
-
-
-
-
-
-
-
-    <dependencies>
+       <dependencies>
        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
         <version>4.7.2</version>
     </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.10.1</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>7.10.1</version>
+        </dependency>
 
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -50,7 +55,12 @@
             <version>7.7.1</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.10.1</version>
+            <scope>test</scope>
+        </dependency>
 
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
@@ -84,54 +94,32 @@
           </dependency>
           <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 
+
+
            <dependency>
                <groupId>io.cucumber</groupId>
                <artifactId>cucumber-picocontainer</artifactId>
-               <version>7.11.0</version>
-               <scope>test</scope>
+               <version>4.2.6</version>
            </dependency>
 
+           <dependency>
+               <groupId>io.cucumber</groupId>
+               <artifactId>cucumber-testng</artifactId>
+               <version>4.2.6</version>
+           </dependency>
+           <dependency>
+               <groupId>repository.io.cucumber</groupId>
+               <artifactId>cucumber-testng</artifactId>
+               <version>7.10.1</version>
+               <scope>test</scope>
+           </dependency>
 
            <dependency>
                <groupId>io.cucumber</groupId>
                <artifactId>cucumber-junit</artifactId>
-               <version>7.11.0</version>
+               <version>4.2.6</version>
            </dependency>
 
-           <dependency>
-               <groupId>io.cucumber</groupId>
-               <artifactId>cucumber-java</artifactId>
-               <version>7.11.0</version>
-               <scope>test</scope>
-           </dependency>
-           <dependency>
-               <groupId>io.cucumber</groupId>
-               <artifactId>cucumber-testng</artifactId>
-               <version>7.11.0</version>
-           </dependency>
-           <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
-
-
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-core</artifactId>
-            <version>7.11.0</version>
-        </dependency>
-
-
-
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-           <dependency>
-               <groupId>io.cucumber</groupId>
-               <artifactId>cucumber-java</artifactId>
-               <version>7.11.0</version>
-           </dependency>
-
-           <dependency>
-               <groupId>io.github.bonigarcia</groupId>
-               <artifactId>webdrivermanager</artifactId>
-               <version>5.3.2</version>
-           </dependency>
 
 
 
