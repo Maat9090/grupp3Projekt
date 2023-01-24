@@ -31,12 +31,54 @@
     </dependency>
 
 
+           <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+           <dependency>
+               <groupId>org.testng</groupId>
+               <artifactId>testng</artifactId>
+               <version>7.7.1</version>
+               <scope>test</scope>
+           </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+
+           <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+           <dependency>
+               <groupId>org.slf4j</groupId>
+               <artifactId>slf4j-api</artifactId>
+               <version>2.0.6</version>
+           </dependency>
+
+
+           <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+           <dependency>
+               <groupId>org.slf4j</groupId>
+               <artifactId>slf4j-simple</artifactId>
+               <version>2.0.6</version>
+               <scope>test</scope>
+           </dependency>
+
+           <!-- https://mvnrepository.com/artifact/junit/junit -->
+           <dependency>
+               <groupId>junit</groupId>
+               <artifactId>junit</artifactId>
+               <version>4.13.2</version>
+               <scope>test</scope>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <version>3.10.1</version>
+           </dependency>
+
+
+
+
+
+           <!-- ***************io.cucumber********************* -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.10.1</version>
+            <version>7.11.0</version>
         </dependency>
 
 
@@ -44,69 +86,30 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-core</artifactId>
-            <version>7.10.1</version>
+            <version>7.11.0</version>
         </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.7.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-testng</artifactId>
-            <version>7.10.1</version>
-            <scope>test</scope>
-        </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.6</version>
-        </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.6</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-
-          <dependency>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-compiler-plugin</artifactId>
-              <version>3.10.1</version>
-          </dependency>
-          <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-
-
 
            <dependency>
                <groupId>io.cucumber</groupId>
                <artifactId>cucumber-picocontainer</artifactId>
-               <version>4.2.6</version>
+               <version>7.11.0</version>
            </dependency>
 
            <dependency>
                <groupId>io.cucumber</groupId>
-               <artifactId>cucumber-testng</artifactId>
-               <version>4.2.6</version>
+               <artifactId>cucumber-junit</artifactId>
+               <version>7.11.0</version>
+               <scope>test</scope>
            </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.11.0</version>
+            <scope>test</scope>
+        </dependency>
+
+
            <dependency>
                <groupId>repository.io.cucumber</groupId>
                <artifactId>cucumber-testng</artifactId>
@@ -114,11 +117,7 @@
                <scope>test</scope>
            </dependency>
 
-           <dependency>
-               <groupId>io.cucumber</groupId>
-               <artifactId>cucumber-junit</artifactId>
-               <version>4.2.6</version>
-           </dependency>
+           <!-- ***************io.cucumber/slut ********************* -->
 
 
 
@@ -154,12 +153,6 @@
                     <useUnlimitedThreads>false</useUnlimitedThreads>
                 </configuration>
             </plugin>
-
-
-
-
-
-
 
 
         </plugins>
